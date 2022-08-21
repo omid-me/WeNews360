@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="5dp"
+    android:layout_margin="6dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+   <com.google.android.material.imageview.ShapeableImageView
+       android:layout_width="0dp"
+       android:layout_height="160dp"
+     android:id="@+id/iv_news_list_cover"
+       app:shapeAppearanceOverlay="@style/RoundedImageView"
+     android:scaleType="centerCrop"
+       android:layout_margin="6dp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/iv_news_list_cover"
+      android:id="@+id/tv_news_list_title"
+      android:fontFamily="@font/iransans"
+      android:padding="16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:textSize="16sp"
+      android:gravity="start"
+      android:textColor="@color/black"
+      android:layout_margin="16dp"/>
+
+  <TextView
+      android:id="@+id/tv_news_list_description"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/iransans"
+      android:gravity="start"
+      app:layout_constraintStart_toStartOf="@id/tv_news_list_title"
+    app:layout_constraintEnd_toEndOf="@id/tv_news_list_title"
+    app:layout_constraintTop_toBottomOf="@id/tv_news_list_title"
+
+      android:layout_marginBottom="16dp"
+    android:padding="8dp"
+    android:textSize="12sp"/>
+      <TextView
+          android:id="@+id/tv_news_list_author"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/iransans"
+          android:gravity="start"
+          app:layout_constraintStart_toStartOf="@id/tv_news_list_title"
+          app:layout_constraintEnd_toEndOf="@id/tv_news_list_title"
+          app:layout_constraintTop_toBottomOf="@id/tv_news_list_description"
+          app:layout_constraintBottom_toBottomOf="parent"
+          android:layout_marginBottom="16dp"
+          android:padding="8dp"
+          android:textSize="11sp"/>
+
+
+
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
